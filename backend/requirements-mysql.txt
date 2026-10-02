@@ -1,0 +1,4 @@
+# Extra dependency needed only when connecting to MySQL/MariaDB (staging/production).
+# Requires MySQL client dev libraries on the host - install with:
+#   pip install -r requirements.txt -r requirements-mysql.txt
+mysqlclient>=2.2

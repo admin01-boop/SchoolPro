@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start app (backend + frontend)",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File ${workspaceFolder}\\scripts\\start-app.ps1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Backend: test",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe backend\\manage.py test accounts academics students core staff",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Backend: lint (ruff)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe -m ruff check backend",
+      "problemMatcher": []
+    },
+    {
+      "label": "Frontend: test",
+      "type": "shell",
+      "command": "npm.cmd --prefix frontend run test",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Frontend: lint",
+      "type": "shell",
+      "command": "npm.cmd --prefix frontend run lint",
+      "problemMatcher": []
+    },
+    {
+      "label": "Test all",
+      "dependsOn": ["Backend: test", "Frontend: test"],
+      "dependsOrder": "sequence",
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}

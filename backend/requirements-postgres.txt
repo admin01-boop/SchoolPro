@@ -1,0 +1,4 @@
+# Extra dependency needed only when connecting to PostgreSQL (recommended for
+# production - better concurrency and JSON/full-text support than MySQL/SQLite).
+#   pip install -r requirements.txt -r requirements-postgres.txt
+psycopg2-binary>=2.9
