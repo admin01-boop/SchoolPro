@@ -1,4 +1,6 @@
-# Managbac (SISC School Management)
+# SchoolPro
+
+Managbac (SISC School Management)
 
 Django REST backend + React (Vite) frontend. Business rules and roadmap: [spec.md](spec.md).
 
@@ -75,7 +77,3 @@ npm.cmd --prefix frontend audit
 - Unexpected backend errors return JSON `{"detail": "Internal server error."}`.
 - Frontend API errors are `ApiError` (`message`, `status`, `body`); a top-level error boundary catches render crashes.
 - Use the launch configs in `.vscode/launch.json`.
-# SchoolPro
-# SchoolPro
-# SchoolPro
-# SchoolPro
